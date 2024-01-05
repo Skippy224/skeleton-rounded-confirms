@@ -133,8 +133,8 @@
 		buttonTextSubmit = modals[0].buttonTextSubmit || buttonTextDefaults.buttonTextSubmit;
 
 		// Override button classes per instance, if available
-		buttonNeutral = modals[0].buttonNeutralClasses || buttonNeutral;
-		buttonPositive = modals[0].buttonPositiveClasses || buttonPositive;
+		buttonNeutral = modals[0].buttonNeutral || buttonNeutral;
+		buttonPositive = modals[0].buttonPositive || buttonPositive;
 
 		// Set Active Component
 		currentComponent = typeof modals[0].component === 'string' ? components[modals[0].component] : modals[0].component;
