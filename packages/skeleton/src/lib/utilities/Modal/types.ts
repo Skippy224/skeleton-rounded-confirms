@@ -40,6 +40,10 @@ export interface ModalSettings {
 	buttonTextConfirm?: string;
 	/** Override the Submit button label. */
 	buttonTextSubmit?: string;
+	/** Override neutral button styles */
+	buttonNeutralClasses?: string;
+	/** Override positive button styles */
+	buttonPositiveClasses?: string;
 	/** Pass arbitrary data per modal instance. */
 	meta?: any;
 }

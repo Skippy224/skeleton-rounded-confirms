@@ -52,9 +52,9 @@
 	export let zIndex: CssClasses = 'z-[999]';
 
 	// Props (buttons)
-	/** Provide classes for neutral buttons, such as Cancel. */
+	/** Override classes for neutral buttons, such as Cancel. */
 	export let buttonNeutral: CssClasses = 'variant-ghost-surface';
-	/** Provide classes for positive actions, such as Confirm or Submit. */
+	/** Override classes for positive actions, such as Confirm or Submit. */
 	export let buttonPositive: CssClasses = 'variant-filled';
 	/** Override the text for the Cancel button. */
 	export let buttonTextCancel: CssClasses = 'Cancel';
@@ -131,6 +131,11 @@
 		buttonTextCancel = modals[0].buttonTextCancel || buttonTextDefaults.buttonTextCancel;
 		buttonTextConfirm = modals[0].buttonTextConfirm || buttonTextDefaults.buttonTextConfirm;
 		buttonTextSubmit = modals[0].buttonTextSubmit || buttonTextDefaults.buttonTextSubmit;
+
+		// Override button classes per instance, if available
+		buttonNeutral = modals[0].buttonNeutralClasses || buttonNeutral;
+		buttonPositive = modals[0].buttonPositiveClasses || buttonPositive;
+
 		// Set Active Component
 		currentComponent = typeof modals[0].component === 'string' ? components[modals[0].component] : modals[0].component;
 	}
